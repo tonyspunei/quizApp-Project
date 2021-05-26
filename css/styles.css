@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Raleway&display=swap");
+
+:root {
+  --main-font-color: #1a1a1a;
+  --main-bg-color: white;
+  --main-theme-color: rgb(243, 168, 47);
+  --light-white: #f5f5f5;
+  --light-gray: #ccc;
+  --light-black: #282a39;
+  --font-body-stack: Raleway, Charcoal, sans-serif;
+  --font-heading-stack: "PT Serif", sans-serif;
+  --container-width: 768px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0px auto;
+}
+
+.button {
+  padding: 1rem 3.8rem;
+  text-transform: uppercase;
+  border: 1px solid #eee;
+  background-color: white;
+  outline: 0px;
+  opacity: 0.9;
+  font-weight: bold;
+  transition: 0.3s all ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+  opacity: 1;
+  background: var(--light-black);
+  color: #fff;
+}
+
+.button.button__bordered {
+  border: 1px solid var(--light-black);
+}
+
+.jabquiz {
+  padding: 2rem 1.4rem;
+}
+
+.jabquestion {
+  text-align: center;
+}
+
+.jabquestion__question {
+  font-family: var(--font-heading-stack);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 0.8rem 4rem;
+  color: var(--main-font-color);
+}
+
+.jabquestion__tracker {
+  font-family: var(--font-body-stack);
+  color: var(--light-black);
+  padding: 1rem;
+}
+
+.progress {
+  border-radius: 4px;
+  margin: 2rem auto;
+  width: 50%;
+  background: var(--light-white);
+}
+
+.progress__inner {
+  height: 10px;
+  width: 0%;
+  background: var(--main-theme-color);
+  border-right: 2px solid black;
+}
+
+.jabquestion__tagline {
+  font-family: var(--font-body-stack);
+  color: var(--light-gray);
+  font-size: 1.4rem;
+}
+
+.jabquiz__choices {
+  list-style-type: none;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jabquiz__choice {
+  min-width: 300px;
+  border-radius: 4px;
+  display: block;
+  background: var(--light-white);
+  margin: 0.5rem auto;
+  font-family: sans-serif;
+  color: var(--light-black);
+  letter-spacing: 1.2px;
+  font-size: 0.86rem;
+}
+
+.jabquiz__label {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.jabquiz__choices input {
+  opacity: 0;
+}
+
+.jabquiz__choices input:checked + label {
+  color: var(--main-theme-color);
+}
+.jabquiz__choices input:checked + label i {
+  background-image: url(/images/circle-filled.svg);
+}
+
+.jabquiz__choices label i {
+  background-image: url(/images/circle-outline.svg);
+  background-size: 40px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  margin-right: 10px;
+}
+
+.jabquiz__footer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.4rem;
+}
